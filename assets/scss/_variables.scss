@@ -153,12 +153,16 @@ $fsi_color: #bdc1c7;
 $fco_color: #93a4a5;
 $fas_color: #7f8d8d;
 
+$mq3b: "screen and (max-width: 320px)";
+$mq4b: "screen and (max-width: 480px)";
 $mq5b: "screen and (max-width: 565px)";
 $mq7b: "screen and (max-width: 767px)";
 $mq9b: "screen and (max-width: 991px)";
 $mq10b: "screen and (max-width: 1023px)";
 $mq12b: "screen and (max-width: 1199px)";
 
+$mq3a: "screen and (min-width: 321px)";
+$mq4a: "screen and (min-width: 481px)";
 $mq5a: "screen and (min-width: 566px)";
 $mq7a: "screen and (min-width: 768px)";
 $mq9a: "screen and (min-width: 992px)";
@@ -186,6 +190,10 @@ $mq12a: "screen and (min-width: 1200px)";
     font-family: "Hymend Script";
     src: url("../fonts/Hymend Script.ttf") format("truetype");
 }
+@font-face {
+    font-family: "Exo";
+    src: url("../fonts/Exo2-VariableFont_wght.ttf") format("truetype");
+}
 
 //font family
 $fms_r: "MilanoSky-Regular";
@@ -193,5 +201,6 @@ $fmi_r: "Mist-Regular";
 $fhy_s: "Hymned Sans";
 $fhy_w: "Hymned Swash";
 $fhy_c: "Hymned Script";
+$fexo: "Exo";
 
 //variables ends here
