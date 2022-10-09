@@ -1,26 +1,534 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="utf-8">
-  <title>Share App</title>
+<!DOCTYPE html>
+<html>
 
-  <base href="/">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <meta name="color-scheme" content="light dark">
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/theme.css">
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#1976d2">
-<style>:root{--ion-color-step-50:#6a638c;--ion-color-step-100:#354047;--ion-color-step-150:#404b52;--ion-color-step-200:#4b555c;--ion-color-step-250:#566066;--ion-color-step-300:#626b70;--ion-color-step-350:#6d757a;--ion-color-step-400:#788085;--ion-color-step-450:#838a8f;--ion-color-step-500:#8f9599;--ion-color-step-550:#9aa0a3;--ion-color-step-600:#a5aaad;--ion-color-step-650:#b0b5b8;--ion-color-step-700:#bcbfc2;--ion-color-step-750:#c7cacc;--ion-color-step-800:#d2d5d6;--ion-color-step-850:#dddfe0;--ion-color-step-900:#e9eaeb;--ion-color-step-950:#f4f4f5;--ion-color-primary:#3c6382;--ion-color-primary-rgb:75, 69, 105;--ion-color-primary-contrast:#ffffff;--ion-color-primary-contrast-rgb:255, 255, 255;--ion-color-primary-shade:#2b506e;--ion-color-primary-tint:#5583a8;--ion-color-secondary:#60a3bc;--ion-color-secondary-rgb:221, 58, 203;--ion-color-secondary-contrast:#ffffff;--ion-color-secondary-contrast-rgb:255, 255, 255;--ion-color-secondary-shade:#3d7f9e;--ion-color-secondary-tint:#79caf0;--ion-color-tertiary:#6a89cc;--ion-color-tertiary-rgb:82, 96, 255;--ion-color-tertiary-contrast:#ffffff;--ion-color-tertiary-contrast-rgb:255, 255, 255;--ion-color-tertiary-shade:#4854e0;--ion-color-tertiary-tint:#6370ff;--ion-color-success:#38ada9;--ion-color-success-rgb:62, 159, 179;--ion-color-success-contrast:#ffffff;--ion-color-success-contrast-rgb:255, 255, 255;--ion-color-success-shade:#097e78;--ion-color-success-tint:#38ada9;--ion-color-warning:#f6b93b;--ion-color-warning-rgb:255, 204, 123;--ion-color-warning-contrast:#000000;--ion-color-warning-contrast-rgb:0, 0, 0;--ion-color-warning-shade:#ebaf4f;--ion-color-warning-tint:#fad390;--ion-color-danger:#e55039;--ion-color-danger-rgb:214, 115, 113;--ion-color-danger-contrast:#ffffff;--ion-color-danger-contrast-rgb:255, 255, 255;--ion-color-danger-shade:#c52e0d;--ion-color-danger-tint:#f56848;--ion-color-dark:#0c2461;--ion-color-dark-rgb:250, 42, 42;--ion-color-dark-contrast:#ffffff;--ion-color-dark-contrast-rgb:255, 255, 255;--ion-color-dark-shade:#1f1e1e;--ion-color-dark-tint:#474747;--ion-color-medium:#fefefe;--ion-color-medium-rgb:146, 148, 156;--ion-color-medium-contrast:#000000;--ion-color-medium-contrast-rgb:0, 0, 0;--ion-color-medium-shade:#808289;--ion-color-medium-tint:#9d9fa6;--ion-color-light:#f6f6f6;--ion-color-light-rgb:244, 245, 248;--ion-color-light-contrast:#000000;--ion-color-light-contrast-rgb:0, 0, 0;--ion-color-light-shade:#f1f2f6;--ion-color-light-tint:#ececec;--ion-color-transparent:none}@media (prefers-color-scheme: dark){body{--ion-color-primary:#428cff;--ion-color-primary-rgb:66, 140, 255;--ion-color-primary-contrast:#ffffff;--ion-color-primary-contrast-rgb:255, 255, 255;--ion-color-primary-shade:#3a7be0;--ion-color-primary-tint:#5598ff;--ion-color-secondary:#50c8ff;--ion-color-secondary-rgb:80, 200, 255;--ion-color-secondary-contrast:#ffffff;--ion-color-secondary-contrast-rgb:255, 255, 255;--ion-color-secondary-shade:#46b0e0;--ion-color-secondary-tint:#62ceff;--ion-color-tertiary:#6a64ff;--ion-color-tertiary-rgb:106, 100, 255;--ion-color-tertiary-contrast:#ffffff;--ion-color-tertiary-contrast-rgb:255, 255, 255;--ion-color-tertiary-shade:#5d58e0;--ion-color-tertiary-tint:#7974ff;--ion-color-success:#2fdf75;--ion-color-success-rgb:47, 223, 117;--ion-color-success-contrast:#000000;--ion-color-success-contrast-rgb:0, 0, 0;--ion-color-success-shade:#29c467;--ion-color-success-tint:#44e283;--ion-color-warning:#ffd534;--ion-color-warning-rgb:255, 213, 52;--ion-color-warning-contrast:#000000;--ion-color-warning-contrast-rgb:0, 0, 0;--ion-color-warning-shade:#e0bb2e;--ion-color-warning-tint:#ffd948;--ion-color-danger:#ff4961;--ion-color-danger-rgb:255, 73, 97;--ion-color-danger-contrast:#ffffff;--ion-color-danger-contrast-rgb:255, 255, 255;--ion-color-danger-shade:#e04055;--ion-color-danger-tint:#ff5b71;--ion-color-dark:#f4f5f8;--ion-color-dark-rgb:244, 245, 248;--ion-color-dark-contrast:#000000;--ion-color-dark-contrast-rgb:0, 0, 0;--ion-color-dark-shade:#d7d8da;--ion-color-dark-tint:#f5f6f9;--ion-color-medium:#989aa2;--ion-color-medium-rgb:152, 154, 162;--ion-color-medium-contrast:#000000;--ion-color-medium-contrast-rgb:0, 0, 0;--ion-color-medium-shade:#86888f;--ion-color-medium-tint:#a2a4ab;--ion-color-light:#222428;--ion-color-light-rgb:34, 36, 40;--ion-color-light-contrast:#ffffff;--ion-color-light-contrast-rgb:255, 255, 255;--ion-color-light-shade:#1e2023;--ion-color-light-tint:#383a3e}}html{--ion-font-family:var(--ion-default-font)}body{background:var(--ion-background-color)}@supports (padding-top: 20px){html{--ion-safe-area-top:var(--ion-statusbar-padding)}}@supports (padding-top: constant(safe-area-inset-top)){html{--ion-safe-area-top:constant(safe-area-inset-top);--ion-safe-area-bottom:constant(safe-area-inset-bottom);--ion-safe-area-left:constant(safe-area-inset-left);--ion-safe-area-right:constant(safe-area-inset-right)}}@supports (padding-top: env(safe-area-inset-top)){html{--ion-safe-area-top:env(safe-area-inset-top);--ion-safe-area-bottom:env(safe-area-inset-bottom);--ion-safe-area-left:env(safe-area-inset-left);--ion-safe-area-right:env(safe-area-inset-right)}}*{box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}html{width:100%;height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}html:not(.hydrated) body{display:none}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;margin:0;padding:0;position:fixed;width:100%;max-width:100%;height:100%;max-height:100%;transform:translateZ(0);text-rendering:optimizeLegibility;overflow:hidden;touch-action:manipulation;-webkit-user-drag:none;-ms-content-zooming:none;word-wrap:break-word;overscroll-behavior-y:none;-webkit-text-size-adjust:none;text-size-adjust:none}html{font-family:var(--ion-font-family)}@font-face{font-family:Exo;src:url(Exo2-VariableFont_wght.96f357417129e840.ttf) format("truetype");font-weight:400;font-style:normal}*{font-family:Exo!important;font-weight:100}</style><link rel="stylesheet" href="styles.6b790f624ca8f8ed.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.6b790f624ca8f8ed.css"></noscript></head>
+    <script src="js/main.js"></script>
 
-<body class="tshare">
-  <app-root></app-root>
-  <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script src="runtime.d96672f125d2b50f.js" type="module"></script><script src="polyfills.3ebd5e0cff18d293.js" type="module"></script><script src="main.35cc8b96efa22660.js" type="module"></script>
+</head>
 
-</body></html>
+<body>
+    <div id="screenMask"></div>
+
+    <div data-role="page" class="whpagebg" id="loginPage">
+        <div data-role="content" class="logincontent devheight">
+            <div class="tac">
+                <img src="img/logo.png" width="176" height="110" alt="Logo">
+            </div>
+            <div class="logopts bottomcontent">
+                <a href="#homePage" class="gpbtn ui-btn ui-corner-all"><span></span>Continue with Google+</a>
+                <a href="#homePage" class="fbbtn ui-btn ui-corner-all"><span></span>Continue with Facebook</a>
+                <a href="#regPage" class="regbtn">Register Now</a>
+            </div>
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /loginPage ends -->
+
+    <div data-role="page" class="pagebg" id="regPage">
+        <div data-role="header" class="headbg" data-position="fixed" data-tap-toggle="false">
+            <a href="#loginPage" data-rel="back" class="headltbtn notabtn"><img src="img/icn_cross.png" width="16" height="16" alt="">
+            </a>
+            <h3>Registration</h3>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="regcontent tac">
+            <form action="">
+                <span>
+                    <div class="ui-field-contain">
+                        <label for="text-1"><img src="img/icn_name.png" width="14" height="20" alt=""></label>
+                        <input type="text" name="text-1" id="text-1" value="" placeholder="Name">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="text-1"><img src="img/icn_phone.png" width="14" height="18" alt=""></label>
+                        <input type="text" name="text-1" id="text-1" value="" placeholder="Phone No">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="text-1"><img src="img/icn_mail.png" width="19" height="12" alt=""></label>
+                        <input type="text" name="text-1" id="text-1" value="" placeholder="Email No">
+                    </div>
+                    </span>
+                <a href="#homePage" class="ui-btn ui-btn-inline ui-corner-all redbtn">Continue</a>
+            </form>
+            <div class="bottomcontent">
+                <p>By Taping "Continue" you are indicating that you have read and agree to <a href="">Term &amp; Conditions</a>
+                </p>
+            </div>
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /regPage ends -->
+
+    <div data-role="page" class="pagebg" id="homePage">
+        <div data-role="content" class="homecontent devheight">
+            <div class="tac">
+                <img src="img/logo.png" width="176" height="110" alt="Logo">
+                <p>App concept credit: <strong>Mr. Trivikraman Nair G</strong>
+                </p>
+            </div>
+            <div class="homenavbtns bottomcontent">
+                <a href="#textiledicPage" class="ui-btn ui-corner-all greenbtn"><span></span>Textile Dictionary</a>
+                <a href="#tectuePage" class="ui-btn ui-corner-all yellowbtn"><span></span>Technical Tuesdays</a>
+                <a href="#favouritesPage" class="ui-btn ui-corner-all bluebtn"><span></span>Favourites</a>
+                <a href="#settingsPage" class="ui-btn ui-corner-all graybtn"><span></span>Settings</a>
+            </div>
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /homePage ends -->
+
+    <div data-role="page" class="pagebg" id="settingsPage">
+        <div data-role="header" class="headbg" data-position="fixed" data-tap-toggle="false">
+            <a href="#homePage" data-rel="back" class="headltbtn notabtn"><img src="img/icn_back.png" width="12" height="21" alt="">
+            </a>
+            <h3>Settings</h3>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="settingscontent">
+            <ul data-role="listview" class="ui-alt-icon ui-nodisc-icon">
+                <li><a href="#aboutusPage">About Us</a>
+                </li>
+                <li><a href="#termnconPage">Terms &amp; Conditions</a>
+                </li>
+                <li><a href="#">Privacy Policy</a>
+                </li>
+                <li><a href="#appfeedPage">App Feedback</a>
+                </li>
+                <li>Notifications
+                    <input type="checkbox" data-role="flipswitch" name="flip-checkbox-4" id="flip-checkbox-4" checked="">
+                </li>
+            </ul>
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /settingsPage ends -->
+
+    <div data-role="page" class="pagebg" id="aboutusPage">
+        <div data-role="header" class="headbg" data-position="fixed" data-tap-toggle="false">
+            <a href="#settingsPage" data-rel="back" class="headltbtn notabtn"><img src="img/icn_back.png" width="12" height="21" alt="">
+            </a>
+            <h3>About Us</h3>
+        </div>
+        <div data-role="content" class="aboutuscontent">
+            <div class="tac">
+                <img src="img/logo.png" width="176" height="110" alt="Logo">
+            </div>
+            <a href="" class="ui-btn ui-corner-all abtbtn">About Us <span></span></a>
+            <ul class="socilbtn">
+                <li><img src="img/logo_facebook.png" width="50" height="50" alt="">
+                </li>
+                <li><img src="img/logo_twitter.png" width="50" height="50" alt="">
+                </li>
+                <li><img src="img/logo_linkedin.png" width="50" height="50" alt="">
+                </li>
+            </ul>
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /aboutusPage ends -->
+
+    <div data-role="page" class="pagebg" id="appfeedPage">
+        <div data-role="header" class="headbg" data-position="fixed" data-tap-toggle="false">
+            <a href="#settingsPage" data-rel="back" class="headltbtn notabtn"><img src="img/icn_back.png" width="12" height="21" alt="">
+            </a>
+            <h3>App Feedback</h3>
+        </div>
+        <div data-role="content" class="appfeedcontent">
+            <p>feedback page will display here</p>
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /appfeedPage ends -->
+
+    <div data-role="page" class="pagebg" id="termnconPage">
+        <div data-role="header" class="headbg" data-position="fixed" data-tap-toggle="false">
+            <a href="#settingsPage" data-rel="back" class="headltbtn notabtn"><img src="img/icn_back.png" width="12" height="21" alt="">
+            </a>
+            <h3>Terms &amp; Conditions</h3>
+        </div>
+        <div data-role="content" class="termnconcontent">
+            <h4>Terms &amp; Conditions</h4>
+            <p>Subscribers to this App are bound by the following terms and conditions (‘terms’) of use so please read these carefully before you download, install or use the App. If you do not agree with any of these terms, please do not use this App. By installing the App (as defined below), you agree to be bound by these terms. Please review them carefully before installation and/or acceptance.</p>
+            <p>If you have any questions about these terms, please write to us on <a href="mailto:contactus@resil.com">contactus@resil.com</a>
+            </p>
+            <h4>DEFINITIONS</h4>
+            <p>The “App” shall mean the software provided by Resil to offer services related to Resil to be used on Apple iOS and Android OS devices and any upgrades from time to time and any other software or documentation which enables the use of the App.</p>
+            <h4>PROPRIETARY RIGHTS AND LICENCE</h4>
+            <p>This App contains material, including text, graphics and sound, which is protected by copyright and/or other intellectual property rights. All copyright and other intellectual property rights in this material are either owned by Resil or have been licensed to Resil by the owner(s) of those rights so that it can use this material as part of this App.</p>
+            <p>Resil hereby grants you a worldwide, non-exclusive, royalty-free revocable licence to use the App for your business and personal use in accordance with these terms.</p>
+            <h4>DATA PROTECTION</h4>
+            <p>Any personal information you supply to Resil when using the App will be used by Resil in accordance with its <a href="#" onclick="openDeviceBrowser('http://resil.com/privacy-policy/')">Privacy Policy</a>
+            </p>
+            <h4>TRADEMARKS</h4>
+            <p>All trademarks and brand names referred to on the App and possibly protected by third parties are subject in all respects to the regulations of the relevant trademark legislation and the rights of possession held by the respective registered owner. It should not be concluded from the sole mention of trademarks that they are not protected by the rights of third parties.</p>
+            <p>Resil® and all products and logos denoted with tm or ® are trademarks or registered trademarks of Resil or its affiliates. Resil trademarks may not be used in connection with any product or service that is not a Resil product or service.</p>
+            <h4>CONDITIONS OF USE</h4>
+            <ol>
+                <li>You will not, nor allow third parties on your behalf to (i) make and distribute copies of the App (ii)attempt to copy, reproduce, alter, modify, reverse engineer, disassemble, decompile, transfer, exchange or translate the App; or (iii) create derivative works of the App of any kind whatsoever.</li>
+                <li>The App is currently made available to you free of charge for your personal, non-commercial use. Resil reserves the right to amend or withdraw the App, or charge for the App or service provided to you in accordance with these terms, at any time and for any reason.</li>
+                <li>You acknowledge that the terms of agreement with your respective mobile network provider (‘Mobile Provider’) will continue to apply when using the App. As a result, you may be charged by the Mobile Provider for access to network connection services for the duration of the connection while accessing the App or any such third party charges as may arise. You accept responsibility for any such charges that arise.</li>
+                <li>If you are not the bill payer for the mobile telephone or handheld device being used to access the App,you will be assumed to have received permission from the bill payer for using the App.</li>
+            </ol>
+            <h4>AVAILABILITY</h4>
+            <ol>
+                <li>This App is available to handheld mobile devices running Apple iOS and Android OS Operating Systems. Resil will use reasonable efforts to make the App available at all times. However you acknowledge the App is provided over the internet and mobile networks and so the quality and availability of the App may be affected by factors outside Resil’s reasonable control.</li>
+                <li>Resil, its group of companies and sub-contractors do not accept any responsibility whatsoever for unavailability of the App, or any difficulty or inability to download or access content or any other communication system failure which may result in the App being unavailable.</li>
+                <li>Resil will not be responsible for any support or maintenance for the App.</li>
+            </ol>
+            <h4>GENDER-NEUTRAL LANGUAGE</h4>
+            <p>The contents of this App apply to men and women alike, even if gender-specific words (e.g. “he” or “she”) are used for simplicity’s sake.</p>
+            <h4>SYSTEM REQUIREMENTS</h4>
+            <ol>
+                <li>In order to use the App, you are required to have a compatible mobile telephone or handheld device,internet access, and the necessary minimum specifications ('Software Requirements').</li>
+                <li>The Software Requirements are as follows: Apple iOS devices running iOS 7 and above , and Android OSdevices running Android 4.2 and above; Language: English</li>
+                <li>The version of the App software may be upgraded from time to time to add support for new functions and services.</li>
+            </ol>
+            <h4>DISCLAIMER OF WARRANTIES, INACCURACIES OR ERRORS</h4>
+            <ol>
+                <li>This App is a distributor of content supplied by third parties and Subscribers. Although Resil tries to ensure that all information and recommendations, whether in relation to the products, services, offerings or otherwise (hereinafter “information”) provided as part of this App is correct at the time of inclusion on the App, Resil does not guarantee the accuracy of the information. Resil makes no representations or warranties as to the completeness or accuracy of information.</li>
+                <li>Resil makes no commitment to update or correct any information that appears on the internet or on this App.</li>
+                <li>Information is supplied upon the condition that the persons receiving the same will make their own determination as to its suitability for their purposes prior to use or in connection with the making of any decision.</li>
+                <li>In no event will Resil be liable for any direct, indirect, special, punitive, exemplary or consequential losses or damages of whatsoever kind arising out of your use or access to the App, including loss of profit or the like whether or not in the contemplation of the parties, whether based on breach of contract, tort (including negligence), product liability or otherwise. Neither Resil and Resil affiliates, nor their officers, employees or agents shall be liable for any loss, damage or expense arising out of any access to, use of, or Resil upon, this App or the information, or any website linked to this App. Resil is not liable to you for any damage or alteration to your equipment including but not limited to computer equipment, handheld device or mobile telephones as a result of the installation or use of the App. Any use of this App or the information is at your own risk.</li>
+                <li>Nothing contained herein is to be construed as a recommendation to use any product, process, equipment or formulation, in conflict with any patent, or otherwise and Resil makes no representation or warranty, express or implied that, the use thereof will not infringe any patent, or otherwise.</li>
+                <li>Resil does not warrant that the App will be compatible with all hardware and software which you may use.We shall not be liable for damage to, or viruses or other code that may affect, any equipment (including but not limited to your mobile device), software, data or other property as a result of your download, installation,access to or use of the App or your obtaining any material from, or as a result of using, the App. Resil expressly reserves the right to change, expand or delete App content, in whole or in part, or cease publication of the App, without prior notification.</li>
+                <li>Resil may change the terms and conditions and disclaimer set out above from time to time without any prior notice by updating the App to incorporate the new terms of use.</li>
+                <li>Resil may terminate use of the App at any time. Upon any termination, (a) the rights and licenses granted to you herein shall terminate; (b) you must cease all use of the Software;</li>
+            </ol>
+            <h4>APPLICABLE LAW AND JURISDICTION</h4>
+            <p>These terms and conditions are governed by and to be interpreted in accordance with laws of India, without regard to the choice or conflicts of law provisions of any jurisdiction. You agree, in the event of any dispute arising in relation to these terms and conditions or any dispute arising in relation to the App whether in contract or tort or otherwise, to submit to the jurisdiction of the courts located at Bangalore, India for the resolution of all such disputes.</p>
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /termnconPage ends -->
+
+    <div data-role="page" class="pagebg" id="favouritesPage">
+        <div data-role="header" class="headbg" data-position="fixed" data-tap-toggle="false">
+            <a href="#settingsPage" data-rel="back" class="headltbtn notabtn"><img src="img/icn_back.png" width="12" height="21" alt="">
+            </a>
+            <h3>Favourites</h3>
+        </div>
+        <div data-role="content" class="favouritescontent">
+            <div data-role="tabs" id="tabs">
+                <div data-role="navbar">
+                    <ul class="tabfavview">
+                        <li><a href="#tabfav1" class="ui-btn-active" data-ajax="false"><span></span></a>
+                        </li>
+                        <li><a href="#tabfav2" data-ajax="false"><span></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tabfav1" class="tabfav1">
+                    <p class="noitems">No Saved Items</p>
+                    <div class="ditpor">
+                        <div class="dateit grncolor">
+                            <p>21</p>
+                            <p>Feb</p>
+                        </div>
+                        <div class="lidet">
+                            <p class="starblu starfaved"></p>
+                            <p>Dummy News</p>
+                        </div>
+                    </div>
+                    <div class="ditpor">
+                        <div class="dateit grncolor">
+                            <p>21</p>
+                            <p>Feb</p>
+                        </div>
+                        <div class="lidet">
+                            <p class="starblu"></p>
+                            <p>Dummy News</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tabfav2" class="tabfav2">
+                    <p class="noitems">No Saved Items</p>
+                    <ul data-role="collapsibleset" data-collapsed="false" data-filter="true" data-inset="true" data-input="#rich-autocomplete-favnames" class="ui-alt-icon ui-nodisc-icon textilelist">
+                        <li data-filtertext="" data-role="collapsible">
+                            <h3>A.B.C Silk</h3>
+                            <span class="ttlfav selttlfav"></span>
+                            <p>A reddish colour dyestuff</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /favouritesPage ends -->
+
+    <div data-role="page" class="pagebg" id="tectuePage">
+        <div data-role="header" class="headbg" data-position="fixed" data-tap-toggle="false">
+            <a href="#homePage" data-rel="back" class="headltbtn notabtn"><img src="img/icn_back.png" width="12" height="21" alt="">
+            </a>
+            <h3>Technical Tuesdays</h3>
+            <a href="#addsuggPage" class="headrtbtn notabtn"><img src="img/plus.png" width="21" height="21" alt="">
+            </a>
+        </div>
+        <div data-role="content" class="tectuecontent nopad">
+            <form class="ui-filterable ttsearchblk ui-alt-icon ui-nodisc-icon">
+                <input id="rich-autocomplete-tech" data-type="search" placeholder="Search...">
+                <a href="" class="ui-btn ui-corner-all searchfilt"><img src="img/icn_filter.png" width="16" height="16" alt="">
+                </a>
+            </form>
+            <ul data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-tech" class="ui-alt-icon ui-nodisc-icon">
+                <li data-filtertext="">
+                    <a href="#dettechPage">
+                        <div class="dateit grncolor">
+                            <p>21</p>
+                            <p>Feb</p>
+                        </div>
+                        <div class="lidet">
+                            <p>Dummy News</p>
+                        </div>
+                    </a>
+                </li>
+                <li data-filtertext="">
+                    <a href="#dettechPage">
+                        <div class="dateit yelcolor">
+                            <p>21</p>
+                            <p>Feb</p>
+                        </div>
+                        <div class="lidet">
+                            <p>Dummy</p>
+                        </div>
+                    </a>
+                </li>
+                <li data-filtertext="">
+                    <a href="#dettechPage">
+                        <div class="dateit blucolor">
+                            <p>21</p>
+                            <p>Feb</p>
+                        </div>
+                        <div class="lidet">
+                            <p>News</p>
+                        </div>
+                    </a>
+                </li>
+                <li data-filtertext="">
+                    <a href="#dettechPage">
+                        <div class="dateit redcolor">
+                            <p>21</p>
+                            <p>Feb</p>
+                        </div>
+                        <div class="lidet">
+                            <p>text</p>
+                        </div>
+                    </a>
+                </li>
+                <li data-filtertext="">
+                    <a href="#dettechPage">
+                        <div class="dateit grncolor">
+                            <p>21</p>
+                            <p>Feb</p>
+                        </div>
+                        <div class="lidet">
+                            <p>text 2</p>
+                        </div>
+                    </a>
+                </li>
+                <li data-filtertext="">
+                    <a href="#dettechPage">
+                        <div class="dateit yelcolor">
+                            <p>21</p>
+                            <p>Feb</p>
+                        </div>
+                        <div class="lidet">
+                            <p>test</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /tectuePage ends -->
+
+    <div data-role="page" class="pagebg" id="addsuggPage">
+        <div data-role="header" class="headbg" data-position="fixed" data-tap-toggle="false">
+            <a href="#tectuePage" data-rel="back" class="headltbtn notabtn"><img src="img/icn_back.png" width="12" height="21" alt="">
+            </a>
+            <h3>Technical Tuesdays Suggestion</h3>
+        </div>
+        <div data-role="content" class="addsuggcontent">
+            <form action="">
+                <input type="text" name="text-1a" id="text-1a" value="" placeholder="Enter Topic">
+                <textarea name="textarea-1" id="textarea-1" placeholder="Content..."></textarea>
+                <a href="" class="ui-btn redsmbtn">Submit</a>
+            </form>
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /addsuggPage ends -->
+
+    <div data-role="page" class="pagebg" id="dettechPage">
+        <div data-role="header" class="headbg" data-position="fixed" data-tap-toggle="false">
+            <a href="#tectuePage" data-rel="back" class="headltbtn notabtn"><img src="img/icn_back.png" width="12" height="21" alt="">
+            </a>
+            <h3>Technical Tuesdays</h3>
+        </div>
+        <div data-role="content" class="dettechcontent">
+            <div class="detailcontent">
+                <div class="dateit yelcolor">
+                    <p>21</p>
+                    <p>Feb</p>
+                </div>
+                <div class="lidet">
+                    <p>test</p>
+                    <p>test test test test test test</p>
+                </div>
+                <p>test test test test test test</p>
+                <p>test test test test test test</p>
+            </div>
+
+        </div>
+        <!-- /content ends -->
+        <div class="optsforttues">
+            <a href="" class="ttdprev"><img src="img/ttdprevious.png" width="" height="" alt="">
+            </a>
+            <a href="" class="ttdnext"><img src="img/ttdnext.png" width="" height="" alt="">
+            </a>
+            <a href="" class="ttdhome"><img src="img/ttdhome.png" width="" height="" alt="">
+            </a>
+            <a href="" class="ttdstar"><span class="starblu starfaved"></span>
+            </a>
+        </div>
+    </div>
+    <!-- /dettechPage ends -->
+
+    <div data-role="page" class="pagebg" id="textiledicPage">
+        <div data-role="header" class="headbg" data-position="fixed" data-tap-toggle="false">
+            <a href="#tectuePage" data-rel="back" class="headltbtn notabtn"><img src="img/icn_back.png" width="12" height="21" alt="">
+            </a>
+            <h3>Textile Dictionary</h3>
+            <a href="#addsuggPage" class="headrtbtn notabtn"><img src="img/plus.png" width="21" height="21" alt="">
+            </a>
+        </div>
+        <div data-role="content" class="textilediccontent nopad">
+            <form class="ui-filterable ttsearchblk ui-alt-icon ui-nodisc-icon">
+                <input id="rich-autocomplete-names" data-type="search" placeholder="Search Word">
+                <a href="#selalfabit" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all searchfilt">A-Z
+                </a>
+            </form>
+            <div data-role="popup" id="selalfabit" data-overlay-theme="b" class="ui-content selalfabit">
+                <ul>
+                    <li>
+                        <a href="" class="ui-btn">a</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">b</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">c</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">d</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">e</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">f</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">g</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">h</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">i</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">j</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">k</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">l</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">m</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">n</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">o</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">p</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">q</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">r</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">s</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">t</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">u</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">v</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">w</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">x</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">y</a>
+                    </li>
+                    <li>
+                        <a href="" class="ui-btn">z</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul data-role="collapsibleset" data-filter="true" data-inset="true" data-input="#rich-autocomplete-names" class="ui-alt-icon ui-nodisc-icon textilelist">
+                <li data-role="list-divider" class="ui-li-divider">a</li>
+                <li data-filtertext="" data-role="collapsible">
+                    <h3>A.B.C Silk</h3>
+                    <span class="ttlfav selttlfav"></span>
+                    <p>A reddish colour dyestuff</p>
+                </li>
+                <li data-filtertext="" data-role="collapsible">
+                    <h3>AAL</h3>
+                    <span class="ttlfav"></span>
+                    <p>A reddish colour dyestuff</p>
+                </li>
+                <li data-filtertext="" data-role="collapsible">
+                    <h3>AATCC</h3>
+                    <p>A reddish colour dyestuff</p>
+                </li>
+                <li data-filtertext="" data-role="collapsible">
+                    <h3>Abaca fibre</h3>
+                    <p>A reddish colour dyestuff</p>
+                </li>
+            </ul>
+
+        </div>
+        <!-- /content ends -->
+    </div>
+    <!-- /textiledicPage ends -->
+
+</body>
+
+</html>

@@ -1,0 +1,901 @@
+/* CSS Document */
+/*######################## Styles ########################*/
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    text-shadow: none !important;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.ui-btn {
+    text-shadow: none !important;
+}
+
+input,
+label,
+p {
+    font-size: 14px;
+    text-shadow: none;
+}
+
+input {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.rt {
+    float: right;
+}
+
+.lt {
+    float: left;
+}
+
+.ttu {
+    text-transform: uppercase;
+}
+
+.moa {
+    margin: 0 auto;
+}
+
+.nopad {
+    padding: 0;
+}
+
+.clear {
+    content: "";
+    clear: both;
+}
+
+.tac {
+    text-align: center;
+}
+
+.fwb {
+    font-weight: bold;
+}
+
+.dn {
+    display: none;
+}
+
+.notabtn.ui-link {
+    background: none !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.ui-footer-fixed {
+    padding-bottom: 0;
+}
+
+.ui-btn.ui-btn-active {
+    background: #eee;
+}
+/*######################## common styles ########################*/
+
+.whpagebg {
+    background: #ffffff;
+}
+
+.pagebg {
+    background: #F9F9F9;
+}
+
+.devheight.ui-content {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.ui-btn-corner-all,
+.ui-btn.ui-corner-all {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.ui-page-theme-a .ui-btn:focus {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.ui-page .headbg {
+    background: #fff;
+    background-color: #fff;
+    border-bottom: 2px solid #f00;
+}
+
+.headbg .ui-title {
+    font-weight: normal;
+    color: #f00;
+    margin: 0 12%;
+}
+/*
+.headbg .notabtn{
+    font-size: 18px;
+    padding: 5px;
+    color: #f00 !important;
+}
+.notabtn.backbtn{
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+}
+*/
+
+.headbg .headrtbtn {
+    font-size: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    padding: 5px 15px;
+}
+
+.headbg .headltbtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+}
+/*######################## login styles ########################*/
+
+.logincontent {
+    position: relative;
+}
+
+.logincontent .tac img {
+    margin: 50px 0;
+}
+
+.bottomcontent {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.bottomcontent {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.logopts .ui-btn {
+    color: #fff;
+    padding-left: 48px;
+    font-weight: bold;
+    border: 0;
+}
+
+.ui-page .gpbtn:link,
+.ui-page .gpbtn:visited,
+.ui-page .gpbtn.ui-btn:hover,
+.ui-page .gpbtn.ui-btn:active,
+.gpbtn.ui-btn.ui-btn-active {
+    background: #DD4B39;
+    color: #fff;
+}
+
+.ui-page .fbbtn:link,
+.ui-page .fbbtn:visited,
+.ui-page .fbbtn.ui-btn:hover,
+.ui-page .fbbtn.ui-btn:active,
+.fbbtn.ui-btn.ui-btn-active {
+    background: #2F477A;
+    color: #fff;
+}
+
+.logopts .ui-btn span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.logopts .ui-btn span:after {
+    content: '';
+    position: absolute;
+    right: -10px;
+}
+
+.gpbtn.ui-btn span:before {
+    content: '';
+    background: url(../img/loggp.jpg) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin: 4px 6px;
+}
+
+.fbbtn.ui-btn span:before {
+    content: '';
+    background: url(../img/logfb.jpg) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin: 4px 6px;
+}
+
+.ui-page .regbtn.ui-link {
+    color: #000 !important;
+    float: right;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.regbtn:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+/*######################## reg styles ########################*/
+
+.ui-page .redbtn.ui-btn:link,
+.ui-page .redbtn.ui-btn:visited,
+.ui-page .redbtn.ui-btn:hover,
+.ui-page .redbtn.ui-btn:active {
+    background: #f00;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.regcontent form {
+    margin: 50px 0;
+}
+
+.regcontent form span {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    display: block;
+    background: #fff;
+    border-radius: 5px;
+    margin: 0 0 15px;
+}
+
+.regcontent label {
+    float: left;
+    width: 15%;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.regcontent .ui-input-text {
+    float: left;
+    width: 85%;
+    border: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.regcontent .ui-input-text input {
+    border: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.regcontent {}
+
+.regcontent .ui-field-contain {
+    padding: 0;
+    clear: both;
+    height: 32px;
+}
+/*######################## homepage styles ########################*/
+
+.homecontent .tac {
+    margin: 30px 0;
+}
+
+.homenavbtns .ui-btn {
+    font-weight: bold;
+    text-align: left;
+    padding: 16px 16px 16px 60px;
+}
+
+.greenbtn.ui-btn:link,
+.greenbtn.ui-btn:visited,
+.greenbtn.ui-btn:hover,
+.greenbtn.ui-btn:active {
+    background: #5AAE1B;
+    border: 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.yellowbtn.ui-btn:link,
+.yellowbtn.ui-btn:visited,
+.yellowbtn.ui-btn:hover,
+.yellowbtn.ui-btn:active {
+    background: #E6A50B;
+    border: 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.bluebtn.ui-btn:link,
+.bluebtn.ui-btn:visited,
+.bluebtn.ui-btn:hover,
+.bluebtn.ui-btn:active {
+    background: #3D7EB8;
+    border: 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.graybtn.ui-btn:link,
+.graybtn.ui-btn:visited,
+.graybtn.ui-btn:hover,
+.graybtn.ui-btn:active {
+    background: #9E9E9E;
+    border: 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.homenavbtns .greenbtn span {
+    margin: 8px 14px;
+    background: url(../img/icn_dictionary.png) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.homenavbtns .yellowbtn span {
+    margin: 14px 14px 2px;
+    background: url(../img/icn_news.png) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.homenavbtns .bluebtn span {
+    margin: 10px 14px 8px;
+    background: url(../img/icn_favourites.png) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.homenavbtns .graybtn span {
+    margin: 10px 14px 8px;
+    background: url(../img/icn_settings.png) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.homenavbtns .ui-btn span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 34px;
+    display: block;
+}
+
+.homenavbtns .ui-btn {
+    font-size: 14px;
+}
+/*######################## settingspage styles ########################*/
+
+.settingscontent ul .ui-btn {
+    background: #fff !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.settingscontent .ui-btn:after {
+    opacity: 0.6;
+}
+
+.settingscontent ul li {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.settingscontent ul li .ui-flipswitch {
+    position: absolute;
+    top: 50%;
+    right: .5625em;
+    margin: -16px 0 0;
+}
+/*######################## aboutusPage styles ########################*/
+
+.abtbtn:link,
+.abtbtn:visited {
+    margin: 40px 0 20px;
+    background: #fff !important;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+}
+
+.abtbtn span {
+    background: url(../img/arrow.png) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    width: 12px;
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -11px;
+    display: block;
+}
+
+.socilbtn {
+    padding: 0;
+    margin: 20px 0 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.socilbtn li,
+.socilbtn li img {
+    border-radius: 500px;
+    display: inline-block;
+    margin: 0 2px;
+    cursor: pointer;
+}
+/*######################## appfeedPage styles ########################*/
+/*######################## termnconPage styles ########################*/
+
+.termnconcontent h4:first-child {
+    margin-top: 0;
+}
+
+.termnconcontent h4 {
+    margin: 15px 0 6px;
+    font-size: 15px;
+}
+
+.termnconcontent p {
+    margin: 0 0 10px;
+}
+
+.termnconcontent ol {
+    padding-left: 20px;
+}
+
+.termnconcontent ol li {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+/*########################  styles ########################*/
+
+.favouritescontent {
+    padding: 0;
+}
+
+.favouritescontent .ui-navbar {
+    background: #F1F1F1;
+    padding: 6px 15px 10px;
+}
+
+.favouritescontent .ui-navbar ul {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.tabfavview .ui-btn {
+    border: 0;
+    background: #fff;
+}
+
+.tabfavview .ui-btn-active {
+    background: #BBBDCB !important;
+    border: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.tabfavview li:first-child .ui-btn {
+    border-radius: 100px 0 0 100px;
+    min-height: 24px;
+}
+
+.tabfavview li:last-child .ui-btn {
+    border-radius: 0 100px 100px 0;
+    min-height: 24px;
+}
+
+.tabfavview li:first-child .ui-btn span {
+    margin: 0 auto;
+    width: 22px;
+    height: 20px;
+    display: block;
+}
+
+.tabfavview li:last-child .ui-btn span {
+    margin: 0 auto;
+    width: 22px;
+    height: 24px;
+    display: block;
+}
+
+.tabfavview li:first-child .ui-btn span {
+    background: url(../img/favtab1.png) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    margin-top: 4px;
+}
+
+.tabfavview li:first-child .ui-btn-active span {
+    background: url(../img/favtab1act.png) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    margin-top: 4px;
+}
+
+.tabfavview li:last-child .ui-btn span {
+    background: url(../img/favtab2.png) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.tabfavview li:last-child .ui-btn-active span {
+    background: url(../img/favtab2act.png) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.ditpor {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 6px;
+}
+
+.ditpor .dateit {
+    top: 6px;
+}
+
+.ditpor .lidet {
+    padding-left: 70px;
+}
+
+.tabfav1 {}
+
+.tabfav2 .textilelist a.ui-icon-minus,
+.tabfav2 .textilelist .ui-collapsible-content {
+    background: #eee !important;
+}
+
+.starblu {
+    background: url(../img/ttdstar.png) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+    float: right;
+}
+
+.ditpor .starblu {
+    width: 25px;
+    height: 25px;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.starblu:active,
+.starblu:hover,
+.starfaved {
+    background: url(../img/ttdstar_sel.png) 0 0 no-repeat;
+}
+/*######################## tectuePage styles ########################*/
+
+.ttsearchblk {
+    background: #E0E0E0;
+    padding: 10px;
+}
+
+.ttsearchblk .ui-input-search {
+    margin: 0 5% 0;
+    width: 60%;
+    float: left;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ttsearchblk form a.searchfilt {
+    width: 30%;
+    float: left;
+    padding: 5px;
+}
+
+.ttsearchblk .searchfilt {
+    margin: 0;
+    padding: 5px;
+}
+
+.ttsearchblk .searchfilt img {
+    vertical-align: middle;
+}
+
+.dateit {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.dateit p,
+a .dateit p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.lidet {
+    min-height: 50px;
+    padding-left: 60px;
+}
+
+.lidet p,
+a .lidet p,
+.detailcontent p {
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+
+.tectuecontent ul.ui-corner-all,
+.textilediccontent ul.ui-corner-all {
+    border-radius: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.tectuecontent ul,
+.tectuecontent ul a,
+.textilediccontent ul,
+.textilediccontent ul a,
+{
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.tectuecontent a.ui-btn:after,
+.textilediccontent a.ui-btn:after {
+    opacity: 0.5;
+}
+
+.grncolor {
+    background: #5AAE1B;
+}
+
+.yelcolor {
+    background: #E6A50B;
+}
+
+.blucolor {
+    background: #3D7EB8;
+}
+
+.redcolor {
+    background: #ED1C24;
+}
+/*######################## addsuggPage styles ########################*/
+
+.addsuggcontent form {
+    margin-top: 50px;
+}
+
+.addsuggcontent .ui-input-text {
+    border: 1px solid #666;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.addsuggcontent textarea.ui-input-text {
+    height: 60px !important;
+    margin-bottom: 30px;
+}
+
+.redsmbtn {
+    width: 80px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 0;
+    background: #f00 !important;
+    color: #fff !important;
+    font-weight: bold !important;
+}
+/*########################  styles ########################*/
+
+.detailcontent {
+    position: relative;
+}
+
+.detailcontent .dateit {
+    top: 0;
+    left: 0;
+}
+
+.detailcontent .lidet p {
+    margin-bottom: 5px;
+}
+
+.optsforttues {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ddd;
+}
+
+.optsforttues a {
+    padding: 6px 0;
+    margin: 0;
+    border: 0;
+    width: 25%;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.optsforttues a:after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #ddd;
+}
+
+.optsforttues a:last-child:after {
+    display: none;
+}
+
+.optsforttues span.starblu {
+    float: none;
+    display: block;
+    margin: 0 auto 4px;
+}
+/*######################## textiledicPage styles ########################*/
+
+#selalfabit-popup {
+    left: 50% !important;
+    margin-left: -145px;
+}
+
+.selalfabit {
+    overflow: hidden !important;
+    width: 250px;
+}
+
+.selalfabit ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.selalfabit ul li {
+    margin: 0 1%;
+    display: inline-block;
+    width: 15%;
+}
+
+.selalfabit ul li a {
+    padding: 8px;
+    margin: 4px 0;
+    text-transform: uppercase;
+}
+
+.textilelist {
+    margin: 0 !important;
+    padding: 0;
+}
+
+.textilelist .ui-corner-all {
+    border-radius: 0 !important;
+}
+
+.textilelist li.ui-li-static {
+    padding: 0;
+    border: 0 0 1px;
+}
+
+.textilelist h3 {
+    margin: 0 !important;
+}
+
+.textilelist h3 .ui-btn {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.textilelist a.ui-btn {
+    border: 0 0 1;
+}
+
+.textilelist a.ui-btn:after {
+    opacity: 0;
+}
+
+.textilelist .ui-li-divider {
+    background: #F4F4F4;
+    text-transform: uppercase;
+    padding: 2px 15px;
+    font-size: 14px;
+}
+
+.textilelist .ui-collapsible {
+    position: relative;
+}
+
+.textilelist .ui-collapsible-content {
+    background: #DBEFFC;
+    padding: 4px 2.2em;
+}
+
+.textilelist a.ui-btn {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.textilelist a.ui-icon-minus {
+    background: #DBEFFC !important;
+    border: 0;
+}
+
+.textilelist li p {
+    margin: 0;
+    color: #333;
+}
+
+.ttlfav {
+    background: url(../img/star.png) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.ttlfav:active,
+.ttlfav:hover,
+.selttlfav {
+    background: url(../img/star_sel.png) 0 0 no-repeat;
+}
+
+.noitems {
+    text-align: center;
+}
+/*######################## end of Styles ########################*/
