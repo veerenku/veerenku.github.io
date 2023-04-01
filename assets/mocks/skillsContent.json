@@ -1,0 +1,83 @@
+{
+  "dev": [
+    {
+      "name": "HTML5",
+      "type": "dev",
+      "imageSrc": "assets/img/skills/html5.svg"
+    },
+    {
+      "name": "CSS3",
+      "type": "dev",
+      "imageSrc": "assets/img/skills/css3.svg"
+    },
+    {
+      "name": "SASS",
+      "type": "dev",
+      "imageSrc": "assets/img/skills/sass.svg"
+    },
+    {
+      "name": "JavaScript",
+      "type": "dev",
+      "imageSrc": "assets/img/skills/javascript.svg"
+    },
+    {
+      "name": "ES6",
+      "type": "dev",
+      "imageSrc": "assets/img/skills/es6.svg"
+    },
+    {
+      "name": "AngularJS",
+      "type": "dev",
+      "imageSrc": "assets/img/skills/angularjs.svg"
+    },
+    {
+      "name": "Angular",
+      "type": "dev",
+      "imageSrc": "assets/img/skills/angular.svg"
+    }
+  ],
+  "design": [
+    {
+      "name": "Adobe Photoshop",
+      "type": "design",
+      "imageSrc": "assets/img/skills/photoshop.svg"
+    },
+    {
+      "name": "Adobe Illustrator",
+      "type": "design",
+      "imageSrc": "assets/img/skills/illustrator.svg"
+    },
+    {
+      "name": "Adobe XD",
+      "type": "design",
+      "imageSrc": "assets/img/skills/xd.svg"
+    },
+    {
+      "name": "Inkscape",
+      "type": "design",
+      "imageSrc": "assets/img/skills/inkscape.svg"
+    }
+  ],
+  "tools": [
+    {
+      "name": "VS Code",
+      "type": "tools",
+      "imageSrc": "assets/img/skills/vscode.svg"
+    },
+    {
+      "name": "GIT",
+      "type": "tools",
+      "imageSrc": "assets/img/skills/git.svg"
+    },
+    {
+      "name": "GitLab",
+      "type": "tools",
+      "imageSrc": "assets/img/skills/gitlab.svg"
+    },
+    {
+      "name": "JIRA",
+      "type": "tools",
+      "imageSrc": "assets/img/skills/jira.svg"
+    }
+  ]
+}

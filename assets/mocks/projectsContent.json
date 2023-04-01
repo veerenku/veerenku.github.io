@@ -1,0 +1,140 @@
+[
+  {
+    "title": "ITAM - Cisco IT Asset Management",
+    "description": "Cisco Users need to enter forecasts for their IT Asset requirements, link their Procurement Orders as and when those are created and view data in Dashboard. Create Templates -> Enter Asset Forecast Intake Forms -> Enter Purchase Orders -> Enter Purchase Orders Line Items. The planning to leverage it's Digital Cloud Platform's (DCP) accelerators for Cloud Native application development which are pre-built for various Business Industry Domain Blueprints.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework, AngularJS 1.X, Angular 13.X",
+    "web": "",
+    "ios": null,
+    "android": null,
+    "imageSrc": ""
+  },
+  {
+    "title": "ACE - Advanced Cisco Experience Launchpad",
+    "description": "The project is a responsive web application named as ACE Launchpad. It's one stop for ordering, registering, provisioning, de-provisioning and retiring of devices. Key features of our project are Bot integration for 24 x 7 support, UMaaS i.e. User Management as a service, this features helps to provide all the necessary access to a new joiner which earlier use to take more than 2-3 hours now with the advent of UMaaS it can be done in seconds, Manage Another's Account, this feature is to help user when they are new to the platform.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework, AngularJS 1.X, Angular 13.X",
+    "web": "https://ace.cisco.com",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/ACE.jpg"
+  },
+  {
+    "title": "Power Pack",
+    "description": "Power Pack for WebEx Teams is a collection of tools that can help you automate repetitive tasks in your spaces. Power Pack Features - Invites [multiple people to new existing space], Broadcast [send message to multiple spaces], Exodus [remove users from spaces], Export [Export members to file or clone to another space], Team Space Manager [Create and manage your team spaces]",
+    "technologies": "HTML5, CSS3, JavaScript, NodeJs",
+    "web": "https://power-pack.io/auth",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/PowerPack.jpg"
+  },
+  {
+    "title": "M1",
+    "description": "M1 Limited is a Network Service Provider in Singapore providing Mobile Services (postpaid and prepaid), Fiber Broadband and Digital Voice Services.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework, AngularJS 1.X",
+    "web": "https://m1.com.sg",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/M1.jpg"
+  },
+  {
+    "title": "PiRuby",
+    "description": "Discover Educational Content from Textbooks. Learning and Excellence Made Easy. PiRuby seamlessly works for any syllabus textbooks. The difficulty of the videos and quizzes presented are matched to the difficulty of the topics in that textbook page of that class and syllabus. Teachers, Parents & Students of Class 8th to 12th are loving PiRuby.",
+    "feature": "PiRuby Features Instantly obtain multimedia educational content for any text book topic. Millions of online educational content made accessible for the first time Get top recommendations for any textbook topic using Patented algorithm eLearning content adapted to difficulty level of your syllabus textbooks and your learning speed Visual note taking through concept maps Build your own library of educational videos, quiz or notes Share videos, quiz & notes with your friends",
+    "technologies": "HTML5, CSS3, AngularJS 1.X, Electron, Ionic Framework v1.X",
+    "web": "http://app.piruby.com",
+    "ios": null,
+    "android": "https://play.google.com/store/apps/details?id=com.carter.app",
+    "imageSrc": "assets/img/projects/PiRuby.jpg"
+  },
+  {
+    "title": "Carter",
+    "description": "Carter is an excellent and reliable pre-booked service to transfer luggage to and from Bangalore airport. Our meet and greet service is personalized and is highly professional. The end to end service is fully insured. The pick up and drop service is diverse and personalized to the needs of every traveler: Family, Business, Leisure or Group. We provide a fully transparent and green transaction.",
+    "feature": "Booking online (email) and offline (SMS) confirmations once you make a booking. The carter allocated to pick your order at location specified/airport will be allocated with picture and number (for easy identification). The carter will wait with a board at the arrival area for easy identification. Rest easy on the flight knowing that there is a carter allocated to pull the weight for you. The luggage is weighed, images are taken and carefully packed in tamper-proof bags for transit. The handles and trolleys will no longer be available once we pack the luggage. The luggage then is bar-coded and images of the same are uploaded. All images are available for view in each order under 'Manage Orders' section of the application. The carter allocated is uniformed and will take your digital signature once the order is completed.",
+    "technologies": "HTML5, CSS3, AngularJS 1.X, Ionic Framework v1.X",
+    "web": "https://carterporter.in",
+    "ios": "https://itunes.apple.com/us/app/carterx/id1244671057?mt=8",
+    "android": "https://play.google.com/store/apps/details?id=com.carter.app",
+    "imageSrc": "assets/img/projects/Carterporter.jpg"
+  },
+  {
+    "title": "Cost Calculator",
+    "description": "Medical Drug sales – Application is used by sale representatives at Lematrda as an iPad specific - Health app LEMTRADA COST VISUALISATION TOOL",
+    "feature": "This tool is a simplified and user-friendly version of the budget impact model. It provides conservative results as it does not take into account the benefit on mortality as well as the benefit on the EDSS progression.",
+    "technologies": "HTML5, CSS3 AngularJS 1.X, Electron, Ionic Framework v1.X",
+    "web": null,
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/CostCalculator.png"
+  },
+  {
+    "title": "Syngene",
+    "description": "Syngene is an internationally reputed contract research and manufacturing organization, which supports R&D programs from lead generation to clinical supplies. Our multi-disciplinary skills in integrated drug discovery and development include capabilities in medicinal chemistry, biology, in vivo pharmacology, toxicology, custom synthesis, process R&D, cGMP manufacturing, formulation and analytical development along with Clinical development services.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework, AngularJS 1.X",
+    "web": "http://syngeneintl.com",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/Syngene.jpg"
+  },
+  {
+    "title": "Mahaveer Hardware",
+    "description": "With our extensive range of hardware, you'll be spoilt for choice. We're a continually changing and growing modern retailer, upgrading our self with the latest technology and design for furniture, but one thing will always remain constant - the value we place on customer service by listening to our customers and obliging their needs by being flexible, personal and thoroughly professional. Our clients include Architects, Interior Designers, Builders & Developers and Contractors within the Retail, Commercial and Residential sector.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework",
+    "web": "http://mahaveerhardware.com",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/Mahaveer.jpg"
+  },
+  {
+    "title": "Giga",
+    "description": "GIGA stands for 'Giving Indians Global Access' and our team partners and targets opportunities in Entrepreneurship Vertical, There is a huge need for facilitated entrepreneurship support which gives a clear path for company growth. At the same time, there are many organizations and investors who want to give back. We bring these two groups together.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework",
+    "web": "http://gigainnohub.com",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/Giga.jpg"
+  },
+  {
+    "title": "Michi",
+    "description": "Michi has seen over the years of experience in Japanese and European leading MNCs, the importance of culture change and employee engagement to the organization. All this by itself only is the part of the solution. Michi looks at culture and employee engagement within the context of a linked and aligned HR tools and processes.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework",
+    "web": "http://michiasia.com",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/Michi.jpg"
+  },
+  {
+    "title": "Bluewinger",
+    "description": "every occasion, a celebration, it's ur search on life and work, Bluewinger avails the coupons and gift card at one place. The application provides services for HR, Business Solutions and Developers with API. Bluewinger embodies your zeal and passion to search on Life and Work.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework, AngularJS 1.X",
+    "web": "https://app.bluewinger.com/#/user/login",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/Bluewinger.jpg"
+  },
+  {
+    "title": "Blackswan",
+    "description": "Digital marketing arm of Pace Wisdom the Landing page for marketing and sales for websites.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework",
+    "web": "https://blackswaninc.in",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/Blackswan.jpg"
+  },
+  {
+    "title": "WOW",
+    "description": "Landing page for world of women where in it provides the exposure for activities conducted.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework",
+    "web": "http://worldofwomen.in",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/WOW.jpg"
+  },
+  {
+    "title": "Alapatt",
+    "description": "Showcase all types of Gold ornaments, jewelry like Pendant, Nose Pin, Rings, Ear Rings, Necklace, Bangles, Bracelets. Complete Details of the product provides the user a best experience of the Jewelry. Users can have a try the product at Home before purchase. Sign in and have a track of orders and Buy online.",
+    "technologies": "HTML5, CSS3, Bootstrap Framework",
+    "web": "https://alapattdiamonds.com",
+    "ios": null,
+    "android": null,
+    "imageSrc": "assets/img/projects/Alapatt.jpg"
+  }
+]
