@@ -1,8 +1,26 @@
 [
   {
+    "title": "SC4 - Custofleet",
+    "description": "Enhancement features for Catalog and Edit Catalog, Custofleet would manage the inventory for all the parts, accessories. This would be a road map of available parts, accessories for procurement. In turn the features like Catalog Administration would make the feature role specific, and the details of multilingual is articulated to maintain the dynamic fields for edit Catalog.",
+    "technologies": "HTML5, CSS3, Angular v16.X, Angular Material and other JavaScript Libraries",
+    "web": "",
+    "ios": null,
+    "android": null,
+    "imageSrc": ""
+  },
+  {
+    "title": "OMS - Order Management System",
+    "description": "Creating an experience for the users to navigate the order and the view for order details. Some of the key features are order search via variety of filters, categorizing and streamlining the UI to the users to manipulate all countries and variety of details. Dealer preparation lead time features, Exclusivity period for an order.",
+    "technologies": "HTML5, CSS3, Angular v13.X, Angular Material and other JavaScript Libraries",
+    "web": "",
+    "ios": null,
+    "android": null,
+    "imageSrc": ""
+  },
+  {
     "title": "ITAM - Cisco IT Asset Management",
     "description": "Cisco Users need to enter forecasts for their IT Asset requirements, link their Procurement Orders as and when those are created and view data in Dashboard. Create Templates -> Enter Asset Forecast Intake Forms -> Enter Purchase Orders -> Enter Purchase Orders Line Items. The planning to leverage it's Digital Cloud Platform's (DCP) accelerators for Cloud Native application development which are pre-built for various Business Industry Domain Blueprints.",
-    "technologies": "HTML5, CSS3, Bootstrap Framework, AngularJS 1.X, Angular 13.X",
+    "technologies": "HTML5, CSS3, Bootstrap Framework, AngularJS 1.X, Angular 9.X",
     "web": "",
     "ios": null,
     "android": null,
@@ -11,8 +29,8 @@
   {
     "title": "ACE - Advanced Cisco Experience Launchpad",
     "description": "The project is a responsive web application named as ACE Launchpad. It's one stop for ordering, registering, provisioning, de-provisioning and retiring of devices. Key features of our project are Bot integration for 24 x 7 support, UMaaS i.e. User Management as a service, this features helps to provide all the necessary access to a new joiner which earlier use to take more than 2-3 hours now with the advent of UMaaS it can be done in seconds, Manage Another's Account, this feature is to help user when they are new to the platform.",
-    "technologies": "HTML5, CSS3, Bootstrap Framework, AngularJS 1.X, Angular 13.X",
-    "web": "https://ace.cisco.com",
+    "technologies": "HTML5, CSS3, Bootstrap Framework, AngularJS 1.X, Angular 9.X",
+    "web": "",
     "ios": null,
     "android": null,
     "imageSrc": "assets/img/projects/ACE.jpg"
