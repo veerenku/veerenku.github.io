@@ -6,7 +6,7 @@
     "web": "",
     "ios": null,
     "android": null,
-    "imageSrc": ""
+    "imageSrc": "assets/img/projects/SC4.jpg"
   },
   {
     "title": "OMS - Order Management System",
@@ -15,7 +15,7 @@
     "web": "",
     "ios": null,
     "android": null,
-    "imageSrc": ""
+    "imageSrc": "assets/img/projects/OMS.jpg"
   },
   {
     "title": "ITAM - Cisco IT Asset Management",
@@ -24,7 +24,7 @@
     "web": "",
     "ios": null,
     "android": null,
-    "imageSrc": ""
+    "imageSrc": "assets/img/projects/ITAM.jpg"
   },
   {
     "title": "ACE - Advanced Cisco Experience Launchpad",
